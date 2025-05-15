@@ -51,7 +51,7 @@ class Batalha {
                         break;
                     case 'Água':
                         $alvo->aplicarStatus("amplia o dano");
-                        $this->resultado->adicionarLog(" {$alvo->nome} abaixou a resistencia do inimigo!");
+                        $this->resultado->adicionarLog(" {$alvo->nome} teve sua resistencia diminuida!");
                         break;
                         
                 }
