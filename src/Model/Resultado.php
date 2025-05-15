@@ -13,7 +13,7 @@ class Resultado {
     public function exibir(): void {
         foreach ($this->log as $linha) {
             echo $linha . PHP_EOL;
-            usleep(900000);
+            usleep(1000000);
         }
         echo "🧾 Vencedor: {$this->vencedor}" . PHP_EOL;
     }

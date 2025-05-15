@@ -32,7 +32,6 @@ class Batalha {
                 $alvo->receberDano($dano);
                 $this->resultado->adicionarLog("🗡️ {$heroi->nome} ({$heroi->classe}) ataca {$alvo->nome} com {$arma->nome}, causando {$dano} de dano.");
 
-                // Efeitos especiais das armas
                 switch ($arma->tipo) {
                     case 'fogo':
                         $alvo->aplicarStatus("🔥 queimando");
@@ -49,6 +48,10 @@ class Batalha {
                     case 'Sangramento':
                         $alvo->aplicarStatus("sangrando");
                         $this->resultado->adicionarLog(" {$alvo->nome} sofreu um corte profundo e está sangrando!");
+                        break;
+                    case 'Água':
+                        $alvo->aplicarStatus("amplia o dano");
+                        $this->resultado->adicionarLog(" {$alvo->nome} abaixou a resistencia do inimigo!");
                         break;
                         
                 }
